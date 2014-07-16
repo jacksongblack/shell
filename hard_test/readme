@@ -1,0 +1,6 @@
+step1: run initialize.sh
+
+step2: cd /sysbench-0.4.12
+
+step3: ./configure && make && make install 
+
