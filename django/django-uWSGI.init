@@ -1,0 +1,12 @@
+[uwsgi]
+socket = 127.0.0.1:3333
+chdir = /home/jack/project/products/dx_crm
+processes = 8
+threads = 4
+#wsgi-file=dxshop/wsgi.py
+env = DJANGO_SETTINGS_MODULE=dx_crm.settings
+#module=django.core.handlers.wsgi:WSGIHandler()
+module = dx_crm.wsgi:application
+daemonize=/var/log/uwsgi_crm.log
+#buffer-size=3276800
+vacuum=True
